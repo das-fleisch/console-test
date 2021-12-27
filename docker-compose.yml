@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+    php-console:
+        container_name: php-console
+        build:
+          context: ./
+          dockerfile: 'Dockerfile'
+        environment:
+          TZ: Europe/Moscow
+        volumes:
+          - ./:/var/www/console/
+        working_dir: /var/www/console/
